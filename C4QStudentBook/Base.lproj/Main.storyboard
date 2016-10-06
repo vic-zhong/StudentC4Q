@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="92" width="375" height="125"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pQc-ZY-rlE" id="EIu-Wg-ou0">
-                                    <frame key="frameInset" width="375" height="124.5"/>
+                                    <frame key="frameInset" width="375" height="124"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SIP-rQ-jdC">
@@ -64,12 +64,12 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="KLx-z7-5P6"/>
                     <connections>
-                        <segue destination="4kU-nh-CKF" kind="show" id="M5P-Sv-o33"/>
+                        <segue destination="4kU-nh-CKF" kind="show" identifier="studentDetailSegueID" id="M5P-Sv-o33"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RGX-LO-60r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="849" y="1"/>
+            <point key="canvasLocation" x="1630" y="0.0"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="fhx-Ln-RhK">
@@ -83,7 +83,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mqC-d2-A10">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mqC-d2-A10">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="G8a-sV-uZ9"/>
                                     <constraint firstAttribute="height" constant="200" id="hLL-HJ-Zf6"/>
@@ -95,6 +95,9 @@
                                     <constraint firstAttribute="width" constant="25" id="jtG-44-wUQ"/>
                                 </constraints>
                                 <state key="normal" title="Button" image="github_icon"/>
+                                <connections>
+                                    <action selector="githubButtonTapped:" destination="4kU-nh-CKF" eventType="touchUpInside" id="jNT-d4-58G"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ElH-6B-Lfn">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -107,6 +110,9 @@
                                     <constraint firstAttribute="height" constant="25" id="pin-5k-daT"/>
                                 </constraints>
                                 <state key="normal" title="Button" image="linkedin_icon"/>
+                                <connections>
+                                    <action selector="linkedinButtonTapped:" destination="4kU-nh-CKF" eventType="touchUpInside" id="ouT-BN-nCT"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Student ID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1gE-4e-FBG">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -137,10 +143,16 @@
                             <constraint firstItem="SgB-JP-Jpa" firstAttribute="top" secondItem="1gE-4e-FBG" secondAttribute="bottom" constant="10" id="yxv-LU-fQb"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailLabel" destination="ElH-6B-Lfn" id="tvC-qf-N8d"/>
+                        <outlet property="funFactTextView" destination="SgB-JP-Jpa" id="stO-0C-kUM"/>
+                        <outlet property="profileImageView" destination="mqC-d2-A10" id="6f9-8e-Y6h"/>
+                        <outlet property="studentIDLabel" destination="1gE-4e-FBG" id="tS1-yX-56u"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nyy-NF-Xzh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1693.5999999999999" y="0.44977511244377816"/>
+            <point key="canvasLocation" x="2420" y="0.0"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="SDb-Sr-S1J">
@@ -153,15 +165,81 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="fVr-ev-UWn" kind="relationship" relationship="rootViewController" id="0hv-Ee-qxr"/>
+                        <segue destination="0zs-f4-AJs" kind="relationship" relationship="rootViewController" id="2DR-Cb-DVY"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8VT-yB-Vx4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="28" y="1.3493253373313345"/>
         </scene>
+        <!--Login View Controller-->
+        <scene sceneID="S6t-ba-s9z">
+            <objects>
+                <viewController id="0zs-f4-AJs" customClass="loginViewController" customModule="C4QStudentBook" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LIC-QE-e36"/>
+                        <viewControllerLayoutGuide type="bottom" id="dzY-e3-8ol"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="63W-IF-9f0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="c4q_logo" translatesAutoresizingMaskIntoConstraints="NO" id="kcu-5w-GjH">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="JSf-B3-pmK"/>
+                                    <constraint firstAttribute="width" constant="240" id="sKh-pl-uF2"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rp2-3a-EN8" userLabel="Email Field">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="BsB-4A-xni"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Awf-wV-IPA" userLabel="Password Field">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="4YW-k8-x8u"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" spellCheckingType="no"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uLe-AQ-lDu" userLabel="Login Button">
+                                <state key="normal" title="Login"/>
+                                <connections>
+                                    <action selector="loginButtonTapped:" destination="0zs-f4-AJs" eventType="touchUpInside" id="CeK-Xk-Oh6"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.48076422517394013" green="0.74127444572856438" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Awf-wV-IPA" firstAttribute="top" secondItem="rp2-3a-EN8" secondAttribute="bottom" constant="16" id="3HB-sa-296"/>
+                            <constraint firstItem="kcu-5w-GjH" firstAttribute="centerX" secondItem="63W-IF-9f0" secondAttribute="centerX" id="6yY-Wy-c8v"/>
+                            <constraint firstItem="rp2-3a-EN8" firstAttribute="top" secondItem="kcu-5w-GjH" secondAttribute="bottom" constant="32" id="Cfw-cR-Aq6"/>
+                            <constraint firstItem="rp2-3a-EN8" firstAttribute="centerX" secondItem="63W-IF-9f0" secondAttribute="centerX" id="DzW-m2-2cJ"/>
+                            <constraint firstItem="Awf-wV-IPA" firstAttribute="centerX" secondItem="63W-IF-9f0" secondAttribute="centerX" id="Fmm-MC-irU"/>
+                            <constraint firstItem="kcu-5w-GjH" firstAttribute="top" secondItem="LIC-QE-e36" secondAttribute="bottom" constant="40" id="R9m-Tq-E9T"/>
+                            <constraint firstItem="uLe-AQ-lDu" firstAttribute="top" secondItem="Awf-wV-IPA" secondAttribute="bottom" constant="8" id="XO8-r7-Hf7"/>
+                            <constraint firstItem="uLe-AQ-lDu" firstAttribute="centerX" secondItem="63W-IF-9f0" secondAttribute="centerX" id="nuK-lg-qYk"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ZVb-zm-v02"/>
+                    <connections>
+                        <outlet property="emailField" destination="rp2-3a-EN8" id="6wz-sV-lFV"/>
+                        <outlet property="loginButton" destination="uLe-AQ-lDu" id="YH0-Zu-Xcx"/>
+                        <outlet property="passwordField" destination="Awf-wV-IPA" id="cpI-z2-zJb"/>
+                        <segue destination="fVr-ev-UWn" kind="show" identifier="loginSegue" id="H1R-9e-6ya"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dge-Cv-b5h" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="828" y="1"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="c4q_logo" width="300" height="300"/>
         <image name="github_icon" width="512" height="512"/>
         <image name="linkedin_icon" width="512" height="512"/>
     </resources>

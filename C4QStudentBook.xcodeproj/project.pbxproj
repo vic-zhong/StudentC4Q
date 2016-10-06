@@ -17,6 +17,7 @@
 		9E30D55E1D9EF08000559389 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E30D55D1D9EF08000559389 /* Student.swift */; };
 		9E30D5601D9EF0BA00559389 /* Bio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E30D55F1D9EF0BA00559389 /* Bio.swift */; };
 		9E39AB931D9F0C71006877AB /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E39AB921D9F0C71006877AB /* DetailViewController.swift */; };
+		9EAF59881DA5B01200811D39 /* loginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAF59871DA5B01200811D39 /* loginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		9E30D55D1D9EF08000559389 /* Student.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
 		9E30D55F1D9EF0BA00559389 /* Bio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bio.swift; sourceTree = "<group>"; };
 		9E39AB921D9F0C71006877AB /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		9EAF59871DA5B01200811D39 /* loginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = loginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				476CD51D1D9EE50C00BDB605 /* AppDelegate.swift */,
+				9EAF59871DA5B01200811D39 /* loginViewController.swift */,
 				9E39AB921D9F0C71006877AB /* DetailViewController.swift */,
 				476CD52F1D9EE61500BDB605 /* StudentsTableViewController.swift */,
 				476CD5211D9EE50C00BDB605 /* Main.storyboard */,
@@ -163,6 +166,7 @@
 				476CD51E1D9EE50C00BDB605 /* AppDelegate.swift in Sources */,
 				9E30D55A1D9EEB5E00559389 /* StudentTableViewCell.swift in Sources */,
 				9E30D55E1D9EF08000559389 /* Student.swift in Sources */,
+				9EAF59881DA5B01200811D39 /* loginViewController.swift in Sources */,
 				9E30D5601D9EF0BA00559389 /* Bio.swift in Sources */,
 				9E30D55C1D9EEF4200559389 /* Data.swift in Sources */,
 				9E39AB931D9F0C71006877AB /* DetailViewController.swift in Sources */,
